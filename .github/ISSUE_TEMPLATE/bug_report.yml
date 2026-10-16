@@ -1,0 +1,59 @@
+name: 🐛 Bug Report
+description: Create a report to help us fix an issue or unexpected behavior.
+title: "[BUG]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      description: Which part of the project is having issues?
+      options:
+        - Discord Bot (apps/bot)
+        - Web Dashboard (apps/web)
+        - Database (packages/database)
+        - Types / Contracts (packages/types)
+        - Build / Turborepo / CI
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Provide step-by-step instructions on how to reproduce this behavior.
+      placeholder: |
+        1. Run '...'
+        2. Execute Discord command '/...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Info
+      description: OS, Node version, pnpm version, browser, etc.
+      placeholder: |
+        - OS: Windows 11 / Linux Ubuntu 24.04
+        - Node Version: v20.x or v22.x
+        - pnpm Version: 10.x
+    validations:
+      required: false

@@ -1,0 +1,29 @@
+{
+  "name": "@dispare/types",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    },
+    "./discord": {
+      "types": "./src/discord.ts",
+      "import": "./src/discord.ts"
+    },
+    "./api": {
+      "types": "./src/api.ts",
+      "import": "./src/api.ts"
+    }
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@dispare/config": "workspace:*",
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
+}

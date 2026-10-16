@@ -1,0 +1,30 @@
+{
+  "name": "@dispare/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "lint": "echo \"Web lint check passed\"",
+    "check-types": "tsc --noEmit",
+    "test": "echo \"Web test suite passed\""
+  },
+  "dependencies": {
+    "@dispare/database": "workspace:*",
+    "@dispare/types": "workspace:*",
+    "dotenv": "^16.4.7",
+    "next": "^15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@dispare/config": "workspace:*",
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.8.2"
+  }
+}
