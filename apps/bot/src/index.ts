@@ -3,7 +3,7 @@ import { env } from "./env.js";
 import * as pingCommand from "./commands/general/ping.js";
 import * as readyEvent from "./events/ready.js";
 
-console.log("🚀 [DISPARE BOT] İstemci başlatılıyor...");
+console.log("🚀 [DISPARE BOT] Initializing client...");
 
 const client = new Client({
   intents: [
@@ -22,22 +22,22 @@ client.on("interactionCreate", async (interaction) => {
 
   const command = commands.get(interaction.commandName);
   if (!command) {
-    console.error(`Komut bulunamadı: ${interaction.commandName}`);
+    console.error(`Command not found: ${interaction.commandName}`);
     return;
   }
 
   try {
     await command.execute(interaction);
   } catch (error) {
-    console.error("Komut yürütülürken hata oluştu:", error);
+    console.error("Error executing command:", error);
     if (interaction.replied || interaction.deferred) {
       await interaction.followUp({
-        content: "❌ Komut yürütülürken beklenmeyen bir hata oluştu!",
+        content: "❌ An unexpected error occurred while executing this command!",
         ephemeral: true,
       });
     } else {
       await interaction.reply({
-        content: "❌ Komut yürütülürken beklenmeyen bir hata oluştu!",
+        content: "❌ An unexpected error occurred while executing this command!",
         ephemeral: true,
       });
     }
@@ -46,7 +46,7 @@ client.on("interactionCreate", async (interaction) => {
 
 async function registerSlashCommands() {
   if (!env.DISCORD_TOKEN || !env.DISCORD_CLIENT_ID) {
-    console.warn("⚠️ DISCORD_TOKEN veya DISCORD_CLIENT_ID bulunamadı. Slash komut kaydı atlandı.");
+    console.warn("⚠️ DISCORD_TOKEN or DISCORD_CLIENT_ID not found. Skipping slash command registration.");
     return;
   }
 
@@ -54,28 +54,28 @@ async function registerSlashCommands() {
   const commandData = [pingCommand.data.toJSON()];
 
   try {
-    console.log("🔄 Slash komutları kaydediliyor...");
+    console.log("🔄 Registering slash commands...");
     if (env.DISCORD_DEV_GUILD_ID) {
       await rest.put(
         Routes.applicationGuildCommands(env.DISCORD_CLIENT_ID, env.DISCORD_DEV_GUILD_ID),
         { body: commandData }
       );
-      console.log(`✅ [DEV GUILD] Slash komutları '${env.DISCORD_DEV_GUILD_ID}' sunucusuna kaydedildi.`);
+      console.log(`✅ [DEV GUILD] Slash commands registered to guild '${env.DISCORD_DEV_GUILD_ID}'.`);
     } else {
       await rest.put(
         Routes.applicationCommands(env.DISCORD_CLIENT_ID),
         { body: commandData }
       );
-      console.log("✅ [GLOBAL] Slash komutları Discord'a global olarak kaydedildi.");
+      console.log("✅ [GLOBAL] Slash commands registered globally to Discord.");
     }
   } catch (error) {
-    console.error("❌ Slash komutları kaydedilirken hata oluştu:", error);
+    console.error("❌ Error registering slash commands:", error);
   }
 }
 
 async function start() {
   if (!env.DISCORD_TOKEN) {
-    console.warn("⚠️ DISCORD_TOKEN tanımlanmadığı için Discord bağlantısı kurulmadı. Lütfen .env dosyanızı doldurun.");
+    console.warn("⚠️ DISCORD_TOKEN is not defined. Discord connection skipped. Please fill out your .env file.");
     return;
   }
 
@@ -83,7 +83,7 @@ async function start() {
     await registerSlashCommands();
     await client.login(env.DISCORD_TOKEN);
   } catch (error) {
-    console.error("❌ Bot giriş yaparken hata oluştu:", error);
+    console.error("❌ Error logging in bot:", error);
   }
 }
 

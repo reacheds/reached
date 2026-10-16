@@ -5,7 +5,7 @@ export const guilds = pgTable("guilds", {
   name: varchar("name", { length: 128 }).notNull(),
   iconUrl: text("icon_url"),
   prefix: varchar("prefix", { length: 8 }).default("!").notNull(),
-  locale: varchar("locale", { length: 8 }).default("tr").notNull(),
+  locale: varchar("locale", { length: 8 }).default("en").notNull(),
   logChannelId: varchar("log_channel_id", { length: 32 }),
   welcomeChannelId: varchar("welcome_channel_id", { length: 32 }),
   isBotPresent: boolean("is_bot_present").default(true).notNull(),

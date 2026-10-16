@@ -8,7 +8,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Sürüm ve Changelog Yönetimi
+    name: Release & Changelog Management
     runs-on: ubuntu-latest
     permissions:
       contents: write

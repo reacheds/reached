@@ -3,7 +3,7 @@ import { type ChatInputCommandInteraction, SlashCommandBuilder } from "discord.j
 
 export const metadata: BotCommandMetadata = {
   name: "ping",
-  description: "Botun ve API'nin gecikme sürelerini kontrol eder.",
+  description: "Checks latency of the bot and Discord API.",
   category: "general",
 };
 
@@ -13,7 +13,7 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction: ChatInputCommandInteraction) {
   const sent = await interaction.reply({
-    content: "🏓 Pong hesaplanıyor...",
+    content: "🏓 Calculating ping...",
     fetchReply: true,
   });
 
@@ -21,6 +21,6 @@ export async function execute(interaction: ChatInputCommandInteraction) {
   const apiLatency = Math.round(interaction.client.ws.ping);
 
   await interaction.editReply({
-    content: `🏓 **Pong!**\n⏱️ Mesaj Gecikmesi: \`${latency}ms\`\n🌐 Discord API Gecikmesi: \`${apiLatency}ms\``,
+    content: `🏓 **Pong!**\n⏱️ Message Latency: \`${latency}ms\`\n🌐 Discord API Latency: \`${apiLatency}ms\``,
   });
 }

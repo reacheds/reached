@@ -5,8 +5,8 @@ export const name = "ready";
 export const once = true;
 
 export async function execute(client: Client<true>) {
-  console.log(`🤖 [DISPARE BOT] Başarıyla giriş yapıldı: ${client.user.tag}`);
-  console.log(`📡 [DISPARE BOT] Aktif Sunucu Sayısı: ${client.guilds.cache.size}`);
+  console.log(`🤖 [DISPARE BOT] Logged in successfully as: ${client.user.tag}`);
+  console.log(`📡 [DISPARE BOT] Active Guilds: ${client.guilds.cache.size}`);
 
   try {
     for (const [guildId, guild] of client.guilds.cache) {
@@ -28,8 +28,8 @@ export async function execute(client: Client<true>) {
           },
         });
     }
-    console.log("✅ [DATABASE] Sunucu kayıtları veritabanına başarıyla senkronize edildi.");
+    console.log("✅ [DATABASE] Guild records synchronized to database.");
   } catch (error) {
-    console.warn("⚠️ [DATABASE] Başlangıç senkronizasyonu atlandı (Veritabanı bağlantısı yok veya yapılandırılmadı).");
+    console.warn("⚠️ [DATABASE] Initial synchronization skipped (Database not connected or unconfigured).");
   }
 }
