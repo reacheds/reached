@@ -95,8 +95,8 @@ export default function HomePage() {
         <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "16px" }}>5 Dakikada Geliştirmeye Başlayın</h2>
         <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "left", background: "#06080c", padding: "20px 24px", borderRadius: "12px", border: "1px solid var(--border-color)", fontFamily: "monospace", fontSize: "14px", color: "#7dd3fc", lineHeight: "1.8" }}>
           <p style={{ color: "#8b949e" }}># 1. Depoyu klonlayın ve bağımlılıkları yükleyin</p>
-          <p>git clone https://github.com/dispare-org/dispare.git</p>
-          <p>cd dispare && pnpm install</p>
+          <p>git clone https://github.com/disparee/disparee.git</p>
+          <p>cd disparee && pnpm install</p>
           <br />
           <p style={{ color: "#8b949e" }}># 2. Ortam değişkenlerini hazırlayın ve dev modunu başlatın</p>
           <p>cp .env.example .env</p>

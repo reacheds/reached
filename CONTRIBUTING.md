@@ -15,8 +15,8 @@ Welcome! We are thrilled that you want to contribute to Dispare. This project is
 
 1. **Fork and clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/dispare.git
-   cd dispare
+   git clone https://github.com/disparee/disparee.git
+   cd disparee
    ```
 
 2. **Install dependencies:**

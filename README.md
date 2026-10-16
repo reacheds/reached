@@ -2,7 +2,7 @@
 
 > An advanced, clean, and community-driven open-source monorepo combining a modern **TypeScript Discord Bot** and a **Next.js Web Dashboard** powered by **Turborepo** and **pnpm workspaces**.
 
-[![CI](https://github.com/dispare-org/dispare/actions/workflows/ci.yml/badge.svg)](https://github.com/dispare-org/dispare/actions/workflows/ci.yml)
+[![CI](https://github.com/disparee/disparee/actions/workflows/ci.yml/badge.svg)](https://github.com/disparee/disparee/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![pnpm](https://img.shields.io/badge/package_manager-pnpm-orange.svg)](https://pnpm.io/)
 [![Turborepo](https://img.shields.io/badge/built_with-Turborepo-000000.svg)](https://turbo.build/)
@@ -24,7 +24,7 @@
 ## 📂 Architecture Overview
 
 ```text
-dispare/
+disparee/
 ├── .github/                 # CI/CD Workflows & Community templates
 ├── apps/
 │   ├── bot/                 # Discord Bot (TypeScript + discord.js)
@@ -44,8 +44,8 @@ dispare/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/dispare-org/dispare.git
-cd dispare
+git clone https://github.com/disparee/disparee.git
+cd disparee
 
 # 2. Install dependencies
 pnpm install

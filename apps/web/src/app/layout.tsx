@@ -27,7 +27,7 @@ export default function RootLayout({
             <nav style={{ display: "flex", gap: "20px", alignItems: "center" }}>
               <a href="#features" style={{ color: "var(--text-muted)", fontSize: "14px", fontWeight: "500" }}>Özellikler</a>
               <a href="#architecture" style={{ color: "var(--text-muted)", fontSize: "14px", fontWeight: "500" }}>Mimari</a>
-              <a href="https://github.com/dispare-org/dispare" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: "8px 16px", fontSize: "13px" }}>
+              <a href="https://github.com/disparee/disparee" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: "8px 16px", fontSize: "13px" }}>
                 GitHub ⭐
               </a>
             </nav>

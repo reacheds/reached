@@ -2,6 +2,14 @@
   "name": "dispare-monorepo",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disparee/disparee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/disparee/disparee/issues"
+  },
+  "homepage": "https://github.com/disparee/disparee#readme",
   "packageManager": "pnpm@10.11.0",
   "engines": {
     "node": ">=20.0.0"
