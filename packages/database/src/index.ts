@@ -1,6 +1,6 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import * as schema from "./schema/index.js";
+import * as schema from "./schema/index";
 
 const connectionString = process.env.DATABASE_URL;
 
@@ -15,5 +15,5 @@ const client = postgres(connectionString || "postgresql://localhost:5432/dispare
 });
 
 export const db = drizzle(client, { schema });
-export * from "./schema/index.js";
+export * from "./schema/index";
 export { sql, eq, and, or, desc, asc } from "drizzle-orm";
