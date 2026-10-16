@@ -13,7 +13,7 @@ const envSchema = z.object({
 const parseEnv = () => {
   const parsed = envSchema.safeParse(process.env);
   if (!parsed.success) {
-    console.warn("[env] validation warning for @dispare/web:");
+    console.warn("[env] validation warning for @reached/web:");
     console.warn(JSON.stringify(parsed.error.format(), null, 2));
   }
   return parsed.data || (process.env as unknown as z.infer<typeof envSchema>);

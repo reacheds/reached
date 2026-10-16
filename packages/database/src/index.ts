@@ -8,7 +8,7 @@ if (!connectionString) {
   console.warn("[database] DATABASE_URL is not set; client will not connect until configured.");
 }
 
-const client = postgres(connectionString || "postgresql://localhost:5432/dispare_db", {
+const client = postgres(connectionString || "postgresql://localhost:5432/reached_db", {
   max: 10,
   idle_timeout: 20,
   connect_timeout: 10,

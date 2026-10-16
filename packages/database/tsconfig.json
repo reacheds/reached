@@ -1,5 +1,5 @@
 {
-  "extends": "@dispare/config/tsconfig/node.json",
+  "extends": "@reached/config/tsconfig/node.json",
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "Bundler",

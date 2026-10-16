@@ -56,5 +56,5 @@ an individual is officially representing the community in public spaces.
 ## Reporting & Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the project maintainers at **security@dispare.org** or via a private maintainer channel.
+reported to the project maintainers at **security@reached.org** or via a private maintainer channel.
 All complaints will be reviewed and investigated promptly and fairly.

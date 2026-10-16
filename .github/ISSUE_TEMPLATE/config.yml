@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Community Discussions & Questions
-    url: https://github.com/disparee/disparee/discussions
+    url: https://github.com/reached/reached/discussions
     about: Ask questions, share ideas, and connect with other community members.
   - name: Security Vulnerability
-    url: https://github.com/disparee/disparee/security/advisories/new
+    url: https://github.com/reached/reached/security/advisories/new
     about: Privately report potential security vulnerabilities to the maintainers.

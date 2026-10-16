@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@dispare/types", "@dispare/database"],
+  transpilePackages: ["@reached/types", "@reached/database"],
 };
 
 export default nextConfig;

@@ -1,5 +1,5 @@
 {
-  "name": "@dispare/types",
+  "name": "@reached/types",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -22,7 +22,7 @@
     "build": "tsc"
   },
   "devDependencies": {
-    "@dispare/config": "workspace:*",
+    "@reached/config": "workspace:*",
     "@types/node": "^22.13.9",
     "typescript": "^5.8.2"
   }

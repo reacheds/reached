@@ -1,6 +1,6 @@
-# Contributing to Dispare
+# Contributing to Reached
 
-Welcome! We are thrilled that you want to contribute to Dispare. This project is fully open-source and community-driven.
+Welcome! We are thrilled that you want to contribute to Reached. This project is fully open-source and community-driven.
 
 ---
 
@@ -15,8 +15,8 @@ Welcome! We are thrilled that you want to contribute to Dispare. This project is
 
 1. **Fork and clone the repository:**
    ```bash
-   git clone https://github.com/disparee/disparee.git
-   cd disparee
+   git clone https://github.com/reached/reached.git
+   cd reached
    ```
 
 2. **Install dependencies:**
@@ -61,7 +61,7 @@ Welcome! We are thrilled that you want to contribute to Dispare. This project is
 
 1. **Package Boundaries:**
    * Never import directly from internal source files of another package (e.g., `../packages/database/src/...`).
-   * Always import through the package export entrypoint (e.g., `@dispare/database`, `@dispare/database/schema`, `@dispare/types`).
+   * Always import through the package export entrypoint (e.g., `@reached/database`, `@reached/database/schema`, `@reached/types`).
 2. **Environment Variables:**
    * Never commit real secrets.
    * If you add a new environment variable, document it in `.env.example` and add validation in the corresponding `env.ts` (using Zod).

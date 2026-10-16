@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dispare | Open-Source Discord Bot & Web Dashboard",
+  title: "Reached: Open-Source Discord Bot & Web Dashboard",
   description: "Modern, high-performance community monorepo powered by Next.js, Discord.js, and Turborepo.",
   keywords: ["Discord Bot", "Next.js", "Monorepo", "Turborepo", "TypeScript", "Drizzle ORM"],
 };
@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

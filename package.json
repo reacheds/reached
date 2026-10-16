@@ -1,15 +1,15 @@
 {
-  "name": "dispare-monorepo",
+  "name": "reached-monorepo",
   "version": "0.1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/disparee/disparee.git"
+    "url": "git+https://github.com/reached/reached.git"
   },
   "bugs": {
-    "url": "https://github.com/disparee/disparee/issues"
+    "url": "https://github.com/reached/reached/issues"
   },
-  "homepage": "https://github.com/disparee/disparee#readme",
+  "homepage": "https://github.com/reached/reached#readme",
   "packageManager": "pnpm@10.11.0",
   "engines": {
     "node": ">=20.0.0"

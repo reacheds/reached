@@ -1,4 +1,4 @@
-import { db, guilds } from "@dispare/database";
+import { db, guilds } from "@reached/database";
 import { type Client, Events } from "discord.js";
 
 export const name = Events.ClientReady;

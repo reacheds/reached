@@ -6,30 +6,12 @@ export function Footer() {
       <div className="framer-footer-grid">
         {/* Brand Column & Copyright */}
         <div className="framer-footer-brand-col">
-          <Link href="/" className="framer-footer-logo-link" aria-label="Dispare Home">
-            <svg
-              className="framer-footer-logo-svg"
-              viewBox="0 0 249 54"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M0 8C0 3.58 3.58 0 8 0H36C51.46 0 64 12.54 64 28V36C64 51.46 51.46 64 36 64H8C3.58 64 0 60.42 0 56V8ZM22 20V44H34C40.63 44 46 38.63 46 32C46 25.37 40.63 20 34 20H22Z" />
-              <text
-                x="76"
-                y="42"
-                fill="currentColor"
-                fontSize="42"
-                fontWeight="800"
-                letterSpacing="-1.5"
-                fontFamily="inherit"
-              >
-                dispare
-              </text>
-            </svg>
+          <Link href="/" className="framer-footer-logo-link" aria-label="Reached Home">
+            <span className="framer-footer-logo-text">Reached</span>
           </Link>
 
           <p className="framer-footer-copyright">
-            &copy; Dispare 2024&ndash;2026.
+            &copy; Reached 2024&ndash;2026.
           </p>
         </div>
 
@@ -175,19 +157,6 @@ export function Footer() {
               <span className="sr-only">LinkedIn</span>
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Giant Background Wordmark Stage */}
-      <div className="framer-wordmark-stage" aria-hidden="true">
-        <div className="framer-wordmark-letters">
-          <span className="framer-wordmark-letter">d</span>
-          <span className="framer-wordmark-letter">i</span>
-          <span className="framer-wordmark-letter">s</span>
-          <span className="framer-wordmark-letter">p</span>
-          <span className="framer-wordmark-letter">a</span>
-          <span className="framer-wordmark-letter">r</span>
-          <span className="framer-wordmark-letter">e</span>
         </div>
       </div>
     </footer>

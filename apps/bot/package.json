@@ -1,5 +1,5 @@
 {
-  "name": "@dispare/bot",
+  "name": "@reached/bot",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -12,14 +12,14 @@
     "test": "echo \"Bot test suite passed\""
   },
   "dependencies": {
-    "@dispare/database": "workspace:*",
-    "@dispare/types": "workspace:*",
+    "@reached/database": "workspace:*",
+    "@reached/types": "workspace:*",
     "discord.js": "^14.18.0",
     "dotenv": "^16.4.7",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@dispare/config": "workspace:*",
+    "@reached/config": "workspace:*",
     "@types/node": "^22.13.9",
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",

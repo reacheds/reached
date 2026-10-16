@@ -1,12 +1,12 @@
 name: ✨ Feature Request
-description: Suggest an idea or feature for Dispare.
+description: Suggest an idea or feature for Reached.
 title: "[FEAT]: "
 labels: ["enhancement", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for helping make Dispare better!
+        Thank you for helping make Reached better!
   - type: dropdown
     id: component
     attributes:

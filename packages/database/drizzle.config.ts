@@ -8,7 +8,7 @@ export default defineConfig({
   out: "./migrations",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/dispare_db",
+    url: process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/reached_db",
   },
   verbose: true,
   strict: true,

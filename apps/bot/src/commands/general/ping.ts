@@ -1,4 +1,4 @@
-import type { BotCommandMetadata } from "@dispare/types";
+import type { BotCommandMetadata } from "@reached/types";
 import { type ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js";
 
 export const metadata: BotCommandMetadata = {

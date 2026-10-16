@@ -1,5 +1,5 @@
 {
-  "name": "@dispare/database",
+  "name": "@reached/database",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -27,7 +27,7 @@
     "postgres": "^3.4.5"
   },
   "devDependencies": {
-    "@dispare/config": "workspace:*",
+    "@reached/config": "workspace:*",
     "@types/node": "^22.13.9",
     "drizzle-kit": "^0.30.5",
     "typescript": "^5.8.2"

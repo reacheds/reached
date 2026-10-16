@@ -1,8 +1,8 @@
-# 🌐 Dispare
+# 🌐 Reached
 
 > An advanced, clean, and community-driven open-source monorepo combining a modern **TypeScript Discord Bot** and a **Next.js Web Dashboard** powered by **Turborepo** and **pnpm workspaces**.
 
-[![CI](https://github.com/disparee/disparee/actions/workflows/ci.yml/badge.svg)](https://github.com/disparee/disparee/actions/workflows/ci.yml)
+[![CI](https://github.com/reached/reached/actions/workflows/ci.yml/badge.svg)](https://github.com/reached/reached/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![pnpm](https://img.shields.io/badge/package_manager-pnpm-orange.svg)](https://pnpm.io/)
 [![Turborepo](https://img.shields.io/badge/built_with-Turborepo-000000.svg)](https://turbo.build/)
@@ -24,7 +24,7 @@
 ## 📂 Architecture Overview
 
 ```text
-disparee/
+reached/
 ├── .github/                 # CI/CD Workflows & Community templates
 ├── apps/
 │   ├── bot/                 # Discord Bot (TypeScript + discord.js)
@@ -44,8 +44,8 @@ disparee/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/disparee/disparee.git
-cd disparee
+git clone https://github.com/reached/reached.git
+cd reached
 
 # 2. Install dependencies
 pnpm install
@@ -64,7 +64,7 @@ pnpm dev
 
 ## 📜 Contributing & Community
 
-Dispare is fully open-source and welcoming to contributors of all skill levels.
+Reached is fully open-source and welcoming to contributors of all skill levels.
 * Please review [CONTRIBUTING.md](CONTRIBUTING.md) before submitting code.
 * Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to understand community standards.
 * For security vulnerabilities, refer to [SECURITY.md](SECURITY.md).

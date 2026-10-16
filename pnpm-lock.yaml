@@ -23,10 +23,10 @@ importers:
 
   apps/bot:
     dependencies:
-      '@dispare/database':
+      '@reached/database':
         specifier: workspace:*
         version: link:../../packages/database
-      '@dispare/types':
+      '@reached/types':
         specifier: workspace:*
         version: link:../../packages/types
       discord.js:
@@ -39,7 +39,7 @@ importers:
         specifier: ^3.24.2
         version: 3.25.76
     devDependencies:
-      '@dispare/config':
+      '@reached/config':
         specifier: workspace:*
         version: link:../../packages/config
       '@types/node':
@@ -57,10 +57,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@dispare/database':
+      '@reached/database':
         specifier: workspace:*
         version: link:../../packages/database
-      '@dispare/types':
+      '@reached/types':
         specifier: workspace:*
         version: link:../../packages/types
       dotenv:
@@ -79,7 +79,7 @@ importers:
         specifier: ^3.24.2
         version: 3.25.76
     devDependencies:
-      '@dispare/config':
+      '@reached/config':
         specifier: workspace:*
         version: link:../../packages/config
       '@types/node':
@@ -109,7 +109,7 @@ importers:
         specifier: ^3.4.5
         version: 3.4.9
     devDependencies:
-      '@dispare/config':
+      '@reached/config':
         specifier: workspace:*
         version: link:../config
       '@types/node':
@@ -124,7 +124,7 @@ importers:
 
   packages/types:
     devDependencies:
-      '@dispare/config':
+      '@reached/config':
         specifier: workspace:*
         version: link:../config
       '@types/node':

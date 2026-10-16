@@ -1,6 +1,6 @@
 # Security Policy
 
-The Dispare project team takes security issues seriously and welcomes reporting of vulnerabilities from community members, researchers, and users.
+The Reached project team takes security issues seriously and welcomes reporting of vulnerabilities from community members, researchers, and users.
 
 ## Supported Versions
 
@@ -15,7 +15,7 @@ The Dispare project team takes security issues seriously and welcomes reporting 
 
 To report a vulnerability:
 1. **GitHub Private Vulnerability Reporting:** Navigate to the **Security** tab of this repository and click **"Report a vulnerability"** to submit a draft security advisory.
-2. **Email:** Alternatively, contact the maintainers directly at **security@dispare.org**.
+2. **Email:** Alternatively, contact the maintainers directly at **security@reached.org**.
 
 ### What to Include in Your Report
 * Description of the vulnerability and its potential impact.
