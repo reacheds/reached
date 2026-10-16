@@ -1,12 +1,12 @@
 import { db, guilds } from "@dispare/database";
-import type { Client } from "discord.js";
+import { type Client, Events } from "discord.js";
 
-export const name = "ready";
+export const name = Events.ClientReady;
 export const once = true;
 
 export async function execute(client: Client<true>) {
-  console.log(`🤖 [DISPARE BOT] Logged in successfully as: ${client.user.tag}`);
-  console.log(`📡 [DISPARE BOT] Active Guilds: ${client.guilds.cache.size}`);
+  console.log(`[bot] authenticated as ${client.user.tag}`);
+  console.log(`[bot] guild count: ${client.guilds.cache.size}`);
 
   try {
     for (const [guildId, guild] of client.guilds.cache) {
@@ -28,8 +28,8 @@ export async function execute(client: Client<true>) {
           },
         });
     }
-    console.log("✅ [DATABASE] Guild records synchronized to database.");
-  } catch (error) {
-    console.warn("⚠️ [DATABASE] Initial synchronization skipped (Database not connected or unconfigured).");
+    console.log("[database] synchronized guild state");
+  } catch {
+    console.warn("[database] guild sync skipped (connection unavailable)");
   }
 }

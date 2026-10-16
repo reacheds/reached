@@ -14,7 +14,7 @@ const envSchema = z.object({
 const parseEnv = () => {
   const parsed = envSchema.safeParse(process.env);
   if (!parsed.success) {
-    console.error("❌ Invalid environment variables for @dispare/bot:");
+    console.error("[env] validation failure for @dispare/bot:");
     console.error(JSON.stringify(parsed.error.format(), null, 2));
     if (process.env.NODE_ENV === "production") {
       process.exit(1);

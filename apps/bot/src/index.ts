@@ -1,9 +1,9 @@
 import { Client, Collection, GatewayIntentBits, REST, Routes } from "discord.js";
-import { env } from "./env.js";
-import * as pingCommand from "./commands/general/ping.js";
-import * as readyEvent from "./events/ready.js";
+import { env } from "./env";
+import * as pingCommand from "./commands/general/ping";
+import * as readyEvent from "./events/ready";
 
-console.log("🚀 [DISPARE BOT] Initializing client...");
+console.log("[bot] initializing client");
 
 const client = new Client({
   intents: [
@@ -22,31 +22,29 @@ client.on("interactionCreate", async (interaction) => {
 
   const command = commands.get(interaction.commandName);
   if (!command) {
-    console.error(`Command not found: ${interaction.commandName}`);
+    console.error(`[bot] unknown command: ${interaction.commandName}`);
     return;
   }
 
   try {
     await command.execute(interaction);
   } catch (error) {
-    console.error("Error executing command:", error);
+    console.error(`[bot] execution failure for /${interaction.commandName}:`, error);
+    const reply = {
+      content: "An unexpected error occurred while processing this request.",
+      ephemeral: true,
+    };
     if (interaction.replied || interaction.deferred) {
-      await interaction.followUp({
-        content: "❌ An unexpected error occurred while executing this command!",
-        ephemeral: true,
-      });
+      await interaction.followUp(reply);
     } else {
-      await interaction.reply({
-        content: "❌ An unexpected error occurred while executing this command!",
-        ephemeral: true,
-      });
+      await interaction.reply(reply);
     }
   }
 });
 
 async function registerSlashCommands() {
   if (!env.DISCORD_TOKEN || !env.DISCORD_CLIENT_ID) {
-    console.warn("⚠️ DISCORD_TOKEN or DISCORD_CLIENT_ID not found. Skipping slash command registration.");
+    console.warn("[bot] missing credentials; skipped command registration");
     return;
   }
 
@@ -54,28 +52,28 @@ async function registerSlashCommands() {
   const commandData = [pingCommand.data.toJSON()];
 
   try {
-    console.log("🔄 Registering slash commands...");
+    console.log("[bot] deploying application commands");
     if (env.DISCORD_DEV_GUILD_ID) {
       await rest.put(
         Routes.applicationGuildCommands(env.DISCORD_CLIENT_ID, env.DISCORD_DEV_GUILD_ID),
         { body: commandData }
       );
-      console.log(`✅ [DEV GUILD] Slash commands registered to guild '${env.DISCORD_DEV_GUILD_ID}'.`);
+      console.log(`[bot] deployed commands to guild ${env.DISCORD_DEV_GUILD_ID}`);
     } else {
       await rest.put(
         Routes.applicationCommands(env.DISCORD_CLIENT_ID),
         { body: commandData }
       );
-      console.log("✅ [GLOBAL] Slash commands registered globally to Discord.");
+      console.log("[bot] deployed commands globally");
     }
   } catch (error) {
-    console.error("❌ Error registering slash commands:", error);
+    console.error("[bot] failed to deploy application commands:", error);
   }
 }
 
 async function start() {
   if (!env.DISCORD_TOKEN) {
-    console.warn("⚠️ DISCORD_TOKEN is not defined. Discord connection skipped. Please fill out your .env file.");
+    console.warn("[bot] DISCORD_TOKEN is not configured");
     return;
   }
 
@@ -83,7 +81,7 @@ async function start() {
     await registerSlashCommands();
     await client.login(env.DISCORD_TOKEN);
   } catch (error) {
-    console.error("❌ Error logging in bot:", error);
+    console.error("[bot] login failed:", error);
   }
 }
 

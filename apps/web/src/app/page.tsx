@@ -4,7 +4,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto", paddingBottom: "60px" }}>
         <div style={{ marginBottom: "20px" }}>
-          <span className="badge">🚀 Turborepo + pnpm + Next.js + Discord.js</span>
+          <span className="badge">Turborepo / pnpm / Next.js / Discord.js</span>
         </div>
         <h1 style={{ fontSize: "52px", fontWeight: "800", lineHeight: "1.15", letterSpacing: "-1.5px", marginBottom: "24px" }}>
           Community-Driven, Advanced <br />
@@ -16,10 +16,10 @@ export default function HomePage() {
 
         <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
           <a href="#quickstart" className="btn btn-primary">
-            Start Contributing ⚡
+            Start Contributing
           </a>
           <a href="#architecture" className="btn btn-secondary">
-            Explore Architecture 🔍
+            Architecture Overview
           </a>
         </div>
       </section>
@@ -27,7 +27,6 @@ export default function HomePage() {
       {/* Live System Specs Cards */}
       <section id="features" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px", marginBottom: "80px" }}>
         <div className="glass-card">
-          <div style={{ fontSize: "28px", marginBottom: "12px" }}>🤖</div>
           <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px" }}>apps/bot</h3>
           <p style={{ color: "var(--text-muted)", fontSize: "14px", marginBottom: "16px" }}>
             Modular slash command architecture built with TypeScript and Discord.js v14, decoupled and ready for production.
@@ -38,7 +37,6 @@ export default function HomePage() {
         </div>
 
         <div className="glass-card">
-          <div style={{ fontSize: "28px", marginBottom: "12px" }}>🌐</div>
           <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px" }}>apps/web</h3>
           <p style={{ color: "var(--text-muted)", fontSize: "14px", marginBottom: "16px" }}>
             Next.js App Router web application providing modern aesthetics, server-side type safety, and dashboard authentication.
@@ -49,7 +47,6 @@ export default function HomePage() {
         </div>
 
         <div className="glass-card">
-          <div style={{ fontSize: "28px", marginBottom: "12px" }}>🗄️</div>
           <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px" }}>packages/database</h3>
           <p style={{ color: "var(--text-muted)", fontSize: "14px", marginBottom: "16px" }}>
             Single source of truth powered by Drizzle ORM and PostgreSQL. Both bot and web access synchronized data models safely.
@@ -63,7 +60,7 @@ export default function HomePage() {
       {/* Technical Highlights Section */}
       <section id="architecture" className="glass-card" style={{ padding: "40px", marginBottom: "80px" }}>
         <h2 style={{ fontSize: "28px", fontWeight: "700", marginBottom: "20px" }}>
-          📐 Open Source Standards & Technical Architecture
+          Technical Architecture & Standards
         </h2>
         
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>

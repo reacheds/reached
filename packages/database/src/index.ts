@@ -5,7 +5,7 @@ import * as schema from "./schema/index";
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-  console.warn("⚠️ DATABASE_URL is not set. Database client will not connect until configured.");
+  console.warn("[database] DATABASE_URL is not set; client will not connect until configured.");
 }
 
 const client = postgres(connectionString || "postgresql://localhost:5432/dispare_db", {

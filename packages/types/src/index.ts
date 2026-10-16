@@ -1,2 +1,2 @@
-export * from "./discord.js";
-export * from "./api.js";
+export * from "./discord";
+export * from "./api";

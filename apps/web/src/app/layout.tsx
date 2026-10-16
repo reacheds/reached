@@ -28,7 +28,7 @@ export default function RootLayout({
               <a href="#features" style={{ color: "var(--text-muted)", fontSize: "14px", fontWeight: "500" }}>Features</a>
               <a href="#architecture" style={{ color: "var(--text-muted)", fontSize: "14px", fontWeight: "500" }}>Architecture</a>
               <a href="https://github.com/disparee/disparee" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ padding: "8px 16px", fontSize: "13px" }}>
-                GitHub ⭐
+                GitHub
               </a>
             </nav>
           </div>
