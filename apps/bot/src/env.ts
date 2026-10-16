@@ -1,7 +1,6 @@
 import * as dotenv from "dotenv";
 import { z } from "zod";
 
-// Load .env from root if available
 dotenv.config({ path: "../../.env" });
 
 const envSchema = z.object({
@@ -17,7 +16,6 @@ const parseEnv = () => {
   if (!parsed.success) {
     console.error("❌ Invalid environment variables for @dispare/bot:");
     console.error(JSON.stringify(parsed.error.format(), null, 2));
-    // In build or CI test environments we don't necessarily want to terminate if mocked
     if (process.env.NODE_ENV === "production") {
       process.exit(1);
     }

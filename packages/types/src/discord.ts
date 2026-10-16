@@ -1,7 +1,3 @@
-/**
- * Discord Command & Event Types for Dispare
- */
-
 export interface BotCommandOption {
   name: string;
   description: string;

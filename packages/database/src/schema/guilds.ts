@@ -1,7 +1,7 @@
 import { boolean, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
 
 export const guilds = pgTable("guilds", {
-  id: varchar("id", { length: 32 }).primaryKey(), // Discord Guild ID
+  id: varchar("id", { length: 32 }).primaryKey(),
   name: varchar("name", { length: 128 }).notNull(),
   iconUrl: text("icon_url"),
   prefix: varchar("prefix", { length: 8 }).default("!").notNull(),

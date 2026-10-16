@@ -9,7 +9,6 @@ export async function execute(client: Client<true>) {
   console.log(`📡 [DISPARE BOT] Aktif Sunucu Sayısı: ${client.guilds.cache.size}`);
 
   try {
-    // Topluluk odaklı veri tabanı senkronizasyonu örneği
     for (const [guildId, guild] of client.guilds.cache) {
       await db
         .insert(guilds)

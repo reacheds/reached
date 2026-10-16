@@ -1,7 +1,6 @@
 import * as dotenv from "dotenv";
 import { z } from "zod";
 
-// Load .env from root if in server/local environment
 dotenv.config({ path: "../../.env" });
 
 const envSchema = z.object({

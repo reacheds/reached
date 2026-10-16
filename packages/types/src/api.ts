@@ -1,7 +1,3 @@
-/**
- * Web API & Dashboard Contract Types for Dispare
- */
-
 export interface ApiResponse<T = unknown> {
   success: boolean;
   data?: T;

@@ -12,11 +12,9 @@ const client = new Client({
   ],
 });
 
-// Commands registry
 const commands = new Collection<string, typeof pingCommand>();
 commands.set(pingCommand.data.name, pingCommand);
 
-// Event listeners
 client.once(readyEvent.name, (...args) => readyEvent.execute(...args));
 
 client.on("interactionCreate", async (interaction) => {
@@ -46,7 +44,6 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-// Slash command registration function
 async function registerSlashCommands() {
   if (!env.DISCORD_TOKEN || !env.DISCORD_CLIENT_ID) {
     console.warn("⚠️ DISCORD_TOKEN veya DISCORD_CLIENT_ID bulunamadı. Slash komut kaydı atlandı.");
@@ -59,14 +56,12 @@ async function registerSlashCommands() {
   try {
     console.log("🔄 Slash komutları kaydediliyor...");
     if (env.DISCORD_DEV_GUILD_ID) {
-      // Fast guild-scoped slash command registration
       await rest.put(
         Routes.applicationGuildCommands(env.DISCORD_CLIENT_ID, env.DISCORD_DEV_GUILD_ID),
         { body: commandData }
       );
       console.log(`✅ [DEV GUILD] Slash komutları '${env.DISCORD_DEV_GUILD_ID}' sunucusuna kaydedildi.`);
     } else {
-      // Global registration
       await rest.put(
         Routes.applicationCommands(env.DISCORD_CLIENT_ID),
         { body: commandData }
@@ -78,7 +73,6 @@ async function registerSlashCommands() {
   }
 }
 
-// Start bot
 async function start() {
   if (!env.DISCORD_TOKEN) {
     console.warn("⚠️ DISCORD_TOKEN tanımlanmadığı için Discord bağlantısı kurulmadı. Lütfen .env dosyanızı doldurun.");

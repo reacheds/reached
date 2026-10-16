@@ -34,7 +34,3 @@ jobs:
 
       - name: Build Bot
         run: pnpm --filter @dispare/bot build
-
-      # Deploy step (e.g. Deploy to VPS via SSH, Railway CLI, Fly.io, or Docker Hub)
-      # - name: Deploy to VPS / Container
-      #   run: echo "Deploying bot to production host..."
